@@ -1,0 +1,27 @@
+
+.perfil-container .perfil-button a{
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #107C10;
+    margin: -250px 50px 0 50px;
+    border-radius:10px;
+    
+}
+
+.perfil-container .perfil-button a button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #107C10;
+    border-radius:5px;
+    color: #fff;
+    font-weight: 600;
+    font-size:16px;
+    cursor: pointer;
+    transition: all 0.7s;
+    
+}
+.perfil-container .perfil-button a button:hover{
+    background-color: #0f690f;
+}

@@ -56,6 +56,10 @@
     font-weight: 600;
     font-size:16px;
     cursor: pointer;
+    transition: all 0.7s;
+}
+.registro-card .registro-buttons button:hover{
+    background-color: #0f690f;
 }
 
 @media screen and (max-width: 1400px){
@@ -64,5 +68,19 @@
     }
     .registro-card .registro-buttons{
         margin-top:0
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .registro-card{
+        width:65%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .registro-card{
+        width:100%;
+        height:100%;
+        border-radius: 0;
     }
 }

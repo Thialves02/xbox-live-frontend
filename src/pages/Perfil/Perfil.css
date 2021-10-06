@@ -1,0 +1,73 @@
+.perfil-container{
+    background-color: #204D20;
+    height:100vh;
+    width:100%;
+    
+}
+.perfil-container .perfis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90%;
+}
+.perfil-container .perfis-container{
+    display:flex;
+    flex-wrap: wrap;
+    width:70%;
+    justify-content: space-around;
+}
+
+.perfil-container .perfis-container .perfil{
+    height: 200px;
+    width: 200px;
+    background-color:white;
+    border-radius:50%;
+    margin-bottom:20px
+}
+.perfil-container .perfis-container .nome-perfil{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.perfil-container .perfis-container .criar-perfil{
+    height: 200px;
+    width: 200px;
+    background-color:white;
+    border-radius:50%;
+    background-image: url(../../assets/images/perfil.png);
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+.perfil-container .perfil-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil-container .perfil-button a{
+        width: 200px;
+        height: 60px;
+        border: none;
+        background-color: #107C10;
+        margin: -250px 0 0 0;
+        border-radius:10px;
+}
+
+.perfil-container .perfil-button a button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #107C10;
+    border-radius:5px;
+    color: #fff;
+    font-weight: 600;
+    font-size:16px;
+    cursor: pointer;
+    transition: all 0.7s
+}
+.perfil-container .perfil-button a button:hover{
+    background-color: #0f690f;
+}
