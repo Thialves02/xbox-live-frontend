@@ -1,0 +1,21 @@
+.game{
+    margin:100px 50px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    cursor: pointer;
+    transition: all 1s;
+}
+.game:hover {
+    transform: scale(1.1);
+}
+
+.game img{
+    width:300px;
+    height:300px;
+    border-radius:5px;
+}
+.game p{
+    font-size:28px;
+    color:#fff;
+}

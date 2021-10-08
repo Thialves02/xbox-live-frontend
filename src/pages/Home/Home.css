@@ -1,0 +1,25 @@
+body,hmtl{
+    height:100%;
+}
+.cards{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    overflow-x: scroll;
+    align-items:center;
+  
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 0 5px 5px 0; 
+}
+::-webkit-scrollbar-thumb {
+    background: #53d320;
+    border-radius: 5px 5px 5px 5px; 
+}
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 5px 5px 5px 5px;
+}

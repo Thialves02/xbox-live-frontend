@@ -6,6 +6,9 @@ export default function EditarPerfil() {
     return (
         <div>
             <div className="perfil-container">
+            <div className="titulo-perfil">
+                <h1>EDITAR PERFIS</h1>
+            </div>
             <div className="perfis">
             <div className="perfis-container">
                 <div className="nome-perfil">

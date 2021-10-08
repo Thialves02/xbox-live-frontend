@@ -6,6 +6,9 @@ export default function Perfil() {
     return (
         <>
         <div className="perfil-container">
+            <div className="titulo-perfil">
+                <h1>PERFIS</h1>
+            </div>
             <div className="perfis">
             <div className="perfis-container">
                 <div className="nome-perfil">
