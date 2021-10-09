@@ -7,9 +7,9 @@ export const Api = {
 
     readByIdUrl: id => Api.baseUrl + "/jogo/" + id,
 
-    /* createProductUrl: () => Api.baseUrl + "/product",
+    createUsuarioUrl: () => Api.baseUrl + "/usuario",
 
-    updateUrl: id => Api.baseUrl + "/product/" + id,
+    /* updateUrl: id => Api.baseUrl + "/product/" + id,
 
     deleteUrl: id => Api.baseUrl + "/product/" + id, */
 
@@ -19,7 +19,7 @@ export const Api = {
             method: "GET",
         }),
 
-    /* // POST
+    // POST
     buildApiPostRequest: (url, body) =>
         fetch(url, {
             method: "POST",
@@ -29,7 +29,7 @@ export const Api = {
             body: JSON.stringify(body),
         }),
 
-    // PATCH
+    /* // PATCH
     buildApiPatchRequest: (url, body) =>
         fetch(url, {
             method: "PATCH",

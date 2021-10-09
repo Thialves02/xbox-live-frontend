@@ -7,6 +7,8 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Perfil from './pages/Perfil/Perfil';
 import Registro from './pages/Registro/Registro';
+import ViewGameplay from './pages/View-Gameplay/ViewGameplay';
+import ViewTrailer from './pages/View-Trailer/ViewTrailer';
 import View from './pages/view/View';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path='/editar-perfis' exact={true} component={EditarPerfis}/>
         <Route path='/home' exact={true} component={Home}/>
         <Route path='/game/view/:id' exact={true} component={View}/>
+        <Route path='/game/view/trailer/:id' exact={true} component={ViewTrailer}/>
+        <Route path='/game/view/gameplay/:id' exact={true} component={ViewGameplay}/>
       </Switch>
     </Router>
     </div>

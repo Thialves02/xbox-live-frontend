@@ -1,0 +1,13 @@
+.view-conteudo-container-trailer{
+    display: flex;
+    flex-direction:column;
+    width:40%;
+    height:600px;
+    padding-left: 50px;
+    position:relative;
+}
+.view-buttons{
+    position:absolute;
+    bottom:30px;
+    left:25px
+}
