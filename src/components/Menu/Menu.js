@@ -13,7 +13,7 @@ export default function Menu() {
                 <ul>
                     <Link to='/home'><li>Jogos</li></Link>
                     <li>Gênero</li>
-                    <li>Administrador</li>
+                    <Link to='/admin'><li>Administrador</li></Link>
                 </ul>
             </div>
         </div>

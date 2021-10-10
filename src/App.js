@@ -1,6 +1,10 @@
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
+import AdicionarJogo from './pages/Adicionar-Jogo/AdicionarJogo';
+import Administrador from './pages/Administrador/Administrador';
 import CriarPerfil from './pages/Criar-Perfil/CriarPerfil';
+import EditarJogo from './pages/Editar-Jogo/EditarJogo';
+import EditarJogos from './pages/Editar-Jogos/EditarJogos';
 import EditarPerfil from './pages/Editar-Perfil/EditarPerfil';
 import EditarPerfis from './pages/Editar-Perfis/EditarPerfis';
 import Home from './pages/Home/Home';
@@ -26,6 +30,10 @@ function App() {
         <Route path='/game/view/:id' exact={true} component={View}/>
         <Route path='/game/view/trailer/:id' exact={true} component={ViewTrailer}/>
         <Route path='/game/view/gameplay/:id' exact={true} component={ViewGameplay}/>
+        <Route path='/admin' exact={true} component={Administrador}/>
+        <Route path='/admin/adicionar-jogo' exact={true} component={AdicionarJogo}/>
+        <Route path='/admin/editar-jogos' exact={true} component={EditarJogos}/>
+        <Route path='/admin/editar-jogo/:id' exact={true} component={EditarJogo}/>
       </Switch>
     </Router>
     </div>

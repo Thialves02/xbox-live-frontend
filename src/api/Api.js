@@ -9,9 +9,11 @@ export const Api = {
 
     createUsuarioUrl: () => Api.baseUrl + "/usuario",
 
-    /* updateUrl: id => Api.baseUrl + "/product/" + id,
+    createJogoUrl: () => Api.baseUrl + "/jogo",
 
-    deleteUrl: id => Api.baseUrl + "/product/" + id, */
+    updateJogoUrl: id => Api.baseUrl + "/jogo/" + id,
+
+    deleteJogoUrl: id => Api.baseUrl + "/jogo/" + id,
 
     // GET
     buildApiGetRequest: url =>
@@ -29,7 +31,7 @@ export const Api = {
             body: JSON.stringify(body),
         }),
 
-    /* // PATCH
+    // PATCH
     buildApiPatchRequest: (url, body) =>
         fetch(url, {
             method: "PATCH",
@@ -43,5 +45,5 @@ export const Api = {
     buildApiDeleteRequest: url =>
         fetch(url, {
             method: "DELETE",
-        }), */
+        }),
 };
