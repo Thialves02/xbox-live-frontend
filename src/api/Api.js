@@ -7,13 +7,25 @@ export const Api = {
 
     readByIdUrl: id => Api.baseUrl + "/jogo/" + id,
 
-    createUsuarioUrl: () => Api.baseUrl + "/usuario",
-
     createJogoUrl: () => Api.baseUrl + "/jogo",
 
     updateJogoUrl: id => Api.baseUrl + "/jogo/" + id,
 
     deleteJogoUrl: id => Api.baseUrl + "/jogo/" + id,
+
+    createUsuarioUrl: () => Api.baseUrl + "/usuario",
+
+    readAllGeneroUrl: () => Api.baseUrl + "/genero",
+
+    readAllGeneroWithGamesUrl: () => Api.baseUrl + "/genero/withGames",
+
+    readByIdGeneroWithGamesUrl: id => Api.baseUrl + "/genero/" + id + "/withGame" ,
+
+    readByIdGeneroUrl: id => Api.baseUrl + "/genero/" + id,
+
+    createGeneroUrl: () => Api.baseUrl + "/genero",
+
+    updateGeneroUrl: id => Api.baseUrl + "/genero/" + id,
 
     // GET
     buildApiGetRequest: url =>

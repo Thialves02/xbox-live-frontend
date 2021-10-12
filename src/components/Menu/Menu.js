@@ -12,7 +12,7 @@ export default function Menu() {
             <div className='navbar-options'>
                 <ul>
                     <Link to='/home'><li>Jogos</li></Link>
-                    <li>Gênero</li>
+                    <Link to='/genero'><li>Gênero</li></Link>
                     <Link to='/admin'><li>Administrador</li></Link>
                 </ul>
             </div>

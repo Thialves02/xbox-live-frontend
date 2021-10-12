@@ -1,0 +1,18 @@
+.categorias{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    justify-content:center;
+}
+.categoria{
+
+    width:150px;
+    display:flex;
+    justify-content:center;
+}
+.categoria p{
+    margin:25px;
+    font-size:25px;
+    font-weight: bold;
+    cursor: pointer;
+}

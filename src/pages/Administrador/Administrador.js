@@ -14,8 +14,8 @@ export default function Administrador() {
                 <h1>ADMINISTRADOR</h1>
                 <Link to='/admin/adicionar-jogo'><button>ADICIONAR JOGO</button></Link>
                 <Link to='/admin/editar-jogos'><button>EDITAR JOGO</button></Link>
-                <Link><button>ADICIONAR CATEGORIA</button></Link>
-                <Link><button>EDITAR CATEGORIA</button></Link>
+                <Link to='/admin/adicionar-categoria'><button>ADICIONAR CATEGORIA</button></Link>
+                <Link to='/admin/editar-categorias'><button>EDITAR CATEGORIA</button></Link>
             </div>
         </div>
         </>
