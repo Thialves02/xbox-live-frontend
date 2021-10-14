@@ -1,5 +1,6 @@
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
+import GeneroWithGame from './components/Genero-With-Game/GeneroWithGame';
 import AdicionarCategoria from './pages/Adicionar-Categoria/AdicionarCategoria';
 import AdicionarJogo from './pages/Adicionar-Jogo/AdicionarJogo';
 import Administrador from './pages/Administrador/Administrador';
@@ -42,6 +43,7 @@ function App() {
         <Route path='/admin/editar-categorias' exact={true} component={EditarCategorias}/>
         <Route path='/admin/editar-categoria/:id' exact={true} component={EditarCategoria}/>
         <Route path='/genero' exact={true} component={Genero}/>
+        <Route path='/genero/:id/withGame' exact={true} component={GeneroWithGame}/>
       </Switch>
     </Router>
     </div>

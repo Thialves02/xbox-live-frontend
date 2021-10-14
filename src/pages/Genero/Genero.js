@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './Genero.css'
 import Menu from '../../components/Menu/Menu'
-import React, { useEffect, useState } from 'react'
 import { Api } from '../../api/Api'
+import JogosGenero from '../../components/Jogos-Genero/JogosGenero';
 
 export default function Genero() {
+    
     const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         const loadCategoriasList = async () => {
@@ -15,18 +16,19 @@ export default function Genero() {
         console.log({categorias})
         loadCategoriasList();
     }, []);
+    
     return (
         <>
         <Menu></Menu>
         <div>
-            <form>
-                <select id="cars" name="cars">
+                <div>
                     {categorias.map((categoria, index) => (
-                        <option value="volvo">{categoria.nome}</option>
+                        <JogosGenero
+                        key={index}
+                        categoria={categoria}
+                        ></JogosGenero>
                     ))}
-                </select>
-                <button type='submit'>Enviar</button>
-            </form>
+                </div>
         </div>
         </>
     )
