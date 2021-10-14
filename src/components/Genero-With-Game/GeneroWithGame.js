@@ -4,24 +4,28 @@ import Menu from '../Menu/Menu'
 
 export default function GeneroWithGame(props) {
     const id = props.match.params.id;
-    const [categorias, setCategorias] = useState([]);
+    const [categoria, setCategoria] = useState(undefined);
 
     useEffect(() => {
-        const loadCategoriasList = async () => {
+        const loadCategoria = async () => {
             const response = await Api.buildApiGetRequest(Api.readByIdGeneroWithGamesUrl(id));
-            const results = await response.json();
-            setCategorias(results);
-            console.log(results);
+            const result = await response.json();
+            setCategoria(result);
+            console.log(result);
         };
-        loadCategoriasList();
+        loadCategoria();
     }, [id]);
+    
+    if (!categoria) {
+        return <div>Carregando...</div>
+    }
    
     return (
         <>
         <Menu></Menu>
         <div>
         
-        {categorias.jogos.map((jogo, jogoIndex) =>
+        {categoria.jogos.map((jogo, jogoIndex) =>
             <div>
                 {jogo.nome}
             </div>

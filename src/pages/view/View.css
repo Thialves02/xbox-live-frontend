@@ -1,11 +1,20 @@
+.view-container-box{
+    height: 90vh;
+    background-image: url(../../assets/images/home.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .view-container{
-    height: 100%;
     display: flex;
     padding: 100px;
-    background-color:rgb(223, 152, 152);
+    background-color:rgba(12, 12, 12, 0.733);
     justify-content:center;
+    padding: 100px 50px;
+    margin: 0 15%;
+    border-radius:10px;
+    color: rgb(240, 240, 240);
 }
-
 .view-img-genre img{
     width:350px;
     height:350px;

@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 export default function Login() {
     return (
         <div className='registro-container'>
-            <div className='registro-card'>
+            <div className='login-card'>
             <img src={logo}></img>
                 <h1>ENTRAR</h1>
                 <p>EMAIL</p>

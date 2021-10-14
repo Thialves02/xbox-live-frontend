@@ -28,6 +28,7 @@ export default function View(props) {
     return (
         <>
         <Menu></Menu>
+        <div className='view-container-box'>
         <div className='view-container'>
             <div className='view-img-genre'>
                 <img src={games.capa}/>
@@ -44,6 +45,7 @@ export default function View(props) {
                     <button onClick={handleClickGameplay}>GAMEPLAY</button>
                 </div>
             </div>
+        </div>
         </div>
         </>
     )

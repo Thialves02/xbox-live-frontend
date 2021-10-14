@@ -23,14 +23,15 @@ export default function ViewTrailer(props) {
         history.push(`/game/view/${games.id}`);
     };
     return (
-        <div>
+        <>
         <Menu></Menu>
+        <div className='view-container-box'>
         <div className='view-container'>
             <div className='view-img-genre'>
                 <img src={games.capa}/>
                 <h4>Genero</h4>
             </div>
-            <div className='view-conteudo-container-trailer'>
+            <div className='view-conteudo-container'>
                 <div className='view-conteudo'>
                     <h1>{games.nome}</h1>
                     <h3>{games.ano}</h3>
@@ -43,5 +44,6 @@ export default function ViewTrailer(props) {
             </div>
         </div>
         </div>
+        </>
     )
 }

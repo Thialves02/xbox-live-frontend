@@ -2,11 +2,12 @@ body,hmtl{
     height:100%;
 }
 .cards{
-    background-color: rgb(12, 12, 12);
+    background-image: url(../../assets/images/home.jpg);
+    background-position: center;
     display: flex;
     overflow-x: scroll;
     align-items:center;
-  
+    height:90vh;
 }
 ::-webkit-scrollbar {
     width: 5px;

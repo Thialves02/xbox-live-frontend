@@ -42,7 +42,7 @@ export default function Registro() {
                 <form onSubmit={handleSubmit}>
                     <h1>REGISTRAR</h1>
                     <div className='registro-infos'>
-                        <div>
+                        <div className='registro-infos-usuario'>
                             <h2>USUARIO</h2>
                             <p>NOME</p>
                             <input type="text" name="nome"></input>
@@ -55,7 +55,7 @@ export default function Registro() {
                             <p>SENHA</p>
                             <input type="text" name="senha"></input>
                         </div>
-                        <div>
+                        <div className='registro-infos-perfil'>
                             <h2>PERFIL INICIAL</h2>
                             <p>TITULO</p>
                             <input type="text" name="titulo"></input>
