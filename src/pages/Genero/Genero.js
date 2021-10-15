@@ -3,6 +3,7 @@ import './Genero.css'
 import Menu from '../../components/Menu/Menu'
 import { Api } from '../../api/Api'
 import JogosGenero from '../../components/Jogos-Genero/JogosGenero';
+import './Genero.css';
 
 export default function Genero() {
     
@@ -20,8 +21,9 @@ export default function Genero() {
     return (
         <>
         <Menu></Menu>
-        <div>
-                <div>
+        <div className='genero-container'>
+        <h1>Escolha a categorias dos jogos</h1>
+                <div className="categorias-items">
                     {categorias.map((categoria, index) => (
                         <JogosGenero
                         key={index}

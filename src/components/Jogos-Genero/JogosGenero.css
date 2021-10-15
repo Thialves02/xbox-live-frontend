@@ -1,0 +1,16 @@
+.categoria-item h2{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 20px 35px;
+    background-color:rgb(19, 92, 25);
+    width:175px;
+    height:55px;
+    border-radius:10px;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+.categoria-item h2:hover{
+    transform: scale(1.1)
+}

@@ -1,0 +1,11 @@
+.genero-container h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin:50px 0;
+}
+.categorias-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

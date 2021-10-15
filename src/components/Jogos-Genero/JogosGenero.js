@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router';
 import { Api } from '../../api/Api';
+import './JogosGenero.css'
 
 export default function JogosGenero({categoria}) {
     const [categorias, setCategorias] = useState([]);
@@ -22,8 +23,10 @@ export default function JogosGenero({categoria}) {
 
     
     return (
-        <div onClick={handleClick}>
-                <h1>{categoria.nome}</h1>
+        <>
+        <div onClick={handleClick} className="categoria-item">
+                <h2>{categoria.nome}</h2>
         </div>
+        </>
     )
 }
