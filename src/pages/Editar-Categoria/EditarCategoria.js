@@ -43,7 +43,7 @@ export default function EditarCategoria(props) {
                 <p>NOME</p>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name='nome' defaultValue={categorias.nome}></input>
-                    <div className='login-buttons'>
+                    <div className='form-buttons'>
                         <button type="submit">ATUALIZAR</button>
                         <Link to='/admin/editar-categorias'><button type="submit">VOLTAR</button></Link>
                     </div>

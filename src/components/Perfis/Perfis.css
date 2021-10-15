@@ -1,0 +1,15 @@
+.perfis-container-component{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:#fff;
+    transition: all 0.7s;
+}
+.perfis-container-component:hover{
+    transform:scale(1.1)
+}
+.perfis-container-component img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+}

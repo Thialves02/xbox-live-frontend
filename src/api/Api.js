@@ -27,6 +27,12 @@ export const Api = {
 
     updateGeneroUrl: id => Api.baseUrl + "/genero/" + id,
 
+    readAllUsuarioUrl: () => Api.baseUrl + "/usuario",
+
+    readAllUsuarioWithPerfisUrl: () => Api.baseUrl + "/usuario/WithPerfis",
+
+    readByIdUsuarioWithPerfisUrl: id => Api.baseUrl + `/usuario/${id}/WithPerfis`,
+    
     // GET
     buildApiGetRequest: url =>
         fetch(url, {

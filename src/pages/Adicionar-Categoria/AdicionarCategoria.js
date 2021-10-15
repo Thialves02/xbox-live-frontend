@@ -27,7 +27,7 @@ export default function AdicionarCategoria() {
                 <p>NOME</p>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name='nome'></input>
-                    <div className='login-buttons'>
+                    <div className='form-buttons'>
                         <button type="submit">ADICIONAR</button>
                         <Link to='/admin'><button type="submit">VOLTAR</button></Link>
                     </div>

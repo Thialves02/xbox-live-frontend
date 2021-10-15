@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Api } from '../../api/Api';
+import Game from '../Game/Game';
 import Menu from '../Menu/Menu'
+import './GeneroWithGame.css'
 
 export default function GeneroWithGame(props) {
     const id = props.match.params.id;
@@ -24,13 +26,14 @@ export default function GeneroWithGame(props) {
         <>
         <Menu></Menu>
         <div>
-        
-        {categoria.jogos.map((jogo, jogoIndex) =>
-            <div>
-                {jogo.nome}
-            </div>
+        <div className="cards">
+        {categoria.jogos.map((game, jogoIndex) =>
+            <Game
+                key={jogoIndex}
+                game={game}
+            ></Game>
         )}
-        
+        </div>
         </div>
         </>
     )

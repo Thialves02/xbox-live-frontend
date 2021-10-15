@@ -1,0 +1,16 @@
+.form-buttons button{
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: #107C10;
+    margin: 10px 0;
+    border-radius:5px;
+    color: #fff;
+    font-weight: 600;
+    font-size:16px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.form-buttons button:hover{
+    background-color: #0f690f;
+}
