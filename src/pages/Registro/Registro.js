@@ -3,8 +3,10 @@ import './Registro.css'
 import logo from '../../assets/images/logo.png'
 import { Api } from '../../api/Api';
 import { Link } from 'react-router-dom';
+import { useHistory } from "react-router";
 
 export default function Registro() {
+    const history = useHistory();
     const handleSubmit =  async event => {
         event.preventDefault();
         const nome = event.target.nome.value;
@@ -33,6 +35,12 @@ export default function Registro() {
             Api.createUsuarioUrl(),
             payload
         )
+        if (response.status === 201) {
+            alert("Usuario criado com sucesso")
+            history.push(`/`);
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
         console.log({response})
     }
     return (

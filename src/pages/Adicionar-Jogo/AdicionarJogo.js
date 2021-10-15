@@ -41,7 +41,13 @@ export default function AdicionarJogo() {
             Api.createJogoUrl(),
             payload
         )
-        console.log({response})
+
+        if (response.status === 201) {
+            alert("Jogo criado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
     }
     return (
         <>
@@ -54,7 +60,7 @@ export default function AdicionarJogo() {
                 <div className='form-inputs'>
                     <div className='form-item'>
                         <h2>NOME</h2>
-                        <input type="text" name='nome'/>
+                        <input type="text" name='nome' />
                     </div>
                     <div className='form-item'>
                         <h2>CAPA</h2>

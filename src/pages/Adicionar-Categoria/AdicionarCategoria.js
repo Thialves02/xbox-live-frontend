@@ -17,7 +17,13 @@ export default function AdicionarCategoria() {
             Api.createGeneroUrl(),
             payload
         )
-        console.log({response})
+        
+        if (response.status === 201) {
+            alert("Gênero criado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
     }
     return (
         <div className='registro-container'>

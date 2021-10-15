@@ -46,6 +46,13 @@ export default function EditarJogo(props) {
             Api.updateJogoUrl(id),
             payload
         )
+
+        if (response.status === 200) {
+            alert("Jogo atualizado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
         console.log({response})
     }
     const history = useHistory();
@@ -55,7 +62,13 @@ export default function EditarJogo(props) {
             Api.deleteJogoUrl(id),
         )
         history.push(`/admin/editar-jogos`);
-        console.log({response})
+
+        if (response.status === 200) {
+            alert("Jogo deletado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
     }
     return (
         <>

@@ -17,6 +17,8 @@ export const Api = {
 
     readAllGeneroUrl: () => Api.baseUrl + "/genero",
 
+    deleteGeneroUrl: id => Api.baseUrl + "/genero/" + id,
+
     readAllGeneroWithGamesUrl: () => Api.baseUrl + "/genero/withGames",
 
     readByIdGeneroWithGamesUrl: id => Api.baseUrl + `/genero/${id}/withGames`,

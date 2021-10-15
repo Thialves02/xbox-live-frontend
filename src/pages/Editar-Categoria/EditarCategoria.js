@@ -3,6 +3,7 @@ import './EditarCategoria.css'
 import logo from '../../assets/images/logo.png'
 import {Link} from "react-router-dom";
 import { Api } from '../../api/Api';
+import { useHistory } from "react-router";
 
 export default function EditarCategoria(props) {
 
@@ -33,7 +34,28 @@ export default function EditarCategoria(props) {
             Api.updateGeneroUrl(id),
             payload
         )
+
+        if (response.status === 200) {
+            alert("Gênero atualizado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
         console.log(response)
+    }
+    const history = useHistory();
+    const handleDelete =  async event =>{
+        event.preventDefault();
+        const response = await Api.buildApiDeleteRequest(
+            Api.deleteGeneroUrl(id),
+        )
+        history.push(`/admin/editar-categorias`);
+        if (response.status === 200) {
+            alert("Gênero deletado com sucesso")
+            
+        } else {
+            alert("Aconteceu algum erro!!!")
+        }
     }
     return (
         <div className='registro-container'>
@@ -45,6 +67,7 @@ export default function EditarCategoria(props) {
                     <input type="text" name='nome' defaultValue={categorias.nome}></input>
                     <div className='form-buttons'>
                         <button type="submit">ATUALIZAR</button>
+                        <button onClick={handleDelete}>DELETAR JOGO</button>
                         <Link to='/admin/editar-categorias'><button type="submit">VOLTAR</button></Link>
                     </div>
                 </form>
