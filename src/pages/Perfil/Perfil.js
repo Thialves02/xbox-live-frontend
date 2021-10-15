@@ -36,11 +36,12 @@ export default function Perfil() {
                         ></Perfis>
                     </div>
                 ))}
-            </div>
                 <div className='container-criar-perfil'>
                     <Link to="/criar-perfil"><div className="criar-perfil"></div></Link>
                     <h1>Criar perfil</h1>
                 </div>
+            </div>
+                
             </div>
             <div className='perfil-button'>
                 <Link to='/editar-perfil'><button>EDITAR PERFIS</button></Link>
