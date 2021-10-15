@@ -31,7 +31,11 @@ export const Api = {
 
     readAllUsuarioWithPerfisUrl: () => Api.baseUrl + "/usuario/WithPerfis",
 
+    readAllPerfilWithJogosUrl: () => Api.baseUrl + "/perfil/WithJogos",
+
     readByIdUsuarioWithPerfisUrl: id => Api.baseUrl + `/usuario/${id}/WithPerfis`,
+
+    readByIdPerfilWithJogosUrl: id => Api.baseUrl + `/perfil/${id}/WithJogos`,
     
     // GET
     buildApiGetRequest: url =>

@@ -11,6 +11,7 @@ import EditarJogo from './pages/Editar-Jogo/EditarJogo';
 import EditarJogos from './pages/Editar-Jogos/EditarJogos';
 import EditarPerfil from './pages/Editar-Perfil/EditarPerfil';
 import EditarPerfis from './pages/Editar-Perfis/EditarPerfis';
+import Favoritos from './pages/Favoritos/Favoritos';
 import Genero from './pages/Genero/Genero';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
@@ -44,6 +45,7 @@ function App() {
         <Route path='/admin/editar-categoria/:id' exact={true} component={EditarCategoria}/>
         <Route path='/genero' exact={true} component={Genero}/>
         <Route path='/genero/:id/withGame' exact={true} component={GeneroWithGame}/>
+        <Route path='/favoritos' exact={true} component={Favoritos}/>
       </Switch>
     </Router>
     </div>
