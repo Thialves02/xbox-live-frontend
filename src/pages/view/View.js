@@ -11,11 +11,12 @@ export default function View(props) {
 
     useEffect(() => {
         const loadGame = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUrl(id));
+            const response = await Api.buildApiGetRequest(Api.readByIdWithGeneroUrl(id));
             const results = await response.json();
             setGames(results);
         };
         loadGame();
+        console.log(games/* .generos[0] */);
     }, [id]);
     const history = useHistory();
 
@@ -32,6 +33,7 @@ export default function View(props) {
         <div className='view-container'>
             <div className='view-img-genre'>
                 <img src={games.capa}/>
+                {/* <h1>{games.generos[0]}</h1> */}
             </div>
             <div className='view-conteudo-container'>
                 <div className='view-conteudo'>

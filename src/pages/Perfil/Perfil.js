@@ -10,7 +10,7 @@ export default function Perfil() {
     let alterou = false;
     useEffect(() => {
         const loadUsuarioList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUsuarioWithPerfisUrl(1));
+            const response = await Api.buildApiGetRequest(Api.readByIdUsuarioWithPerfisUrl(1),true);
             const results = await response.json();
             if(JSON.stringify(usuario)!=JSON.stringify(results)){
                 setUsuario(results.perfis);

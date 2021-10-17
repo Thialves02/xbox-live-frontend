@@ -1,6 +1,7 @@
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
 import GeneroWithGame from './components/Genero-With-Game/GeneroWithGame';
+import GuardedRoute from './components/GuardedRoute/GuardedRoute';
 import AdicionarCategoria from './pages/Adicionar-Categoria/AdicionarCategoria';
 import AdicionarJogo from './pages/Adicionar-Jogo/AdicionarJogo';
 import Administrador from './pages/Administrador/Administrador';
@@ -28,7 +29,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={Login}/>
         <Route path='/registro' exact={true} component={Registro}/>
-        <Route path='/perfil' exact={true} component={Perfil}/>
+        <GuardedRoute path='/perfil' exact={true} component={Perfil}/>
         <Route path='/criar-perfil' exact={true} component={CriarPerfil}/>
         <Route path='/editar-perfil' exact={true} component={EditarPerfil}/>
         <Route path='/editar-perfis' exact={true} component={EditarPerfis}/>

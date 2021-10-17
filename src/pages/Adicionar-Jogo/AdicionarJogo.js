@@ -9,7 +9,7 @@ export default function AdicionarJogo() {
     const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         const loadCategoriasList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl());
+            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl(),true);
             const results = await response.json();
             setCategorias(results);
         };
@@ -39,7 +39,8 @@ export default function AdicionarJogo() {
 
         const response = await Api.buildApiPostRequest(
             Api.createJogoUrl(),
-            payload
+            payload,
+            true
         )
 
         if (response.status === 201) {

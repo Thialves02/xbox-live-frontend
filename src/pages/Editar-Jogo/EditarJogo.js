@@ -44,7 +44,8 @@ export default function EditarJogo(props) {
 
         const response = await Api.buildApiPatchRequest(
             Api.updateJogoUrl(id),
-            payload
+            payload,
+            true
         )
 
         if (response.status === 200) {
@@ -60,6 +61,7 @@ export default function EditarJogo(props) {
         event.preventDefault();
         const response = await Api.buildApiDeleteRequest(
             Api.deleteJogoUrl(id),
+            true
         )
         history.push(`/admin/editar-jogos`);
 

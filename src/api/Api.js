@@ -1,11 +1,17 @@
 export const Api = {
     baseUrl: "http://localhost:3000",
 
-    // Endpoint - Product
+    // ENDPOINT - LOGIN
+
+    loginUrl: () => Api.baseUrl + "/login",
+
+    // ENDPOINT - JOGOS
 
     readAllUrl: () => Api.baseUrl + "/jogo",
 
     readByIdUrl: id => Api.baseUrl + "/jogo/" + id,
+
+    readByIdWithGeneroUrl: id => Api.baseUrl + `/jogo/${id}/WithGenero`,
 
     createJogoUrl: () => Api.baseUrl + "/jogo",
 
@@ -13,7 +19,17 @@ export const Api = {
 
     deleteJogoUrl: id => Api.baseUrl + "/jogo/" + id,
 
+    // ENDPOINT -  USUARIO
+
     createUsuarioUrl: () => Api.baseUrl + "/usuario",
+
+    readAllUsuarioWithPerfisUrl: () => Api.baseUrl + "/usuario/WithPerfis",
+
+    readByIdUsuarioWithPerfisUrl: id => Api.baseUrl + `/usuario/${id}/WithPerfis`,
+
+    readAllUsuarioUrl: () => Api.baseUrl + "/usuario",
+
+    // ENDPOINT -  GENERO
 
     readAllGeneroUrl: () => Api.baseUrl + "/genero",
 
@@ -29,45 +45,52 @@ export const Api = {
 
     updateGeneroUrl: id => Api.baseUrl + "/genero/" + id,
 
-    readAllUsuarioUrl: () => Api.baseUrl + "/usuario",
-
-    readAllUsuarioWithPerfisUrl: () => Api.baseUrl + "/usuario/WithPerfis",
+    // ENDPOINT -  PERFIL
 
     readAllPerfilWithJogosUrl: () => Api.baseUrl + "/perfil/WithJogos",
 
-    readByIdUsuarioWithPerfisUrl: id => Api.baseUrl + `/usuario/${id}/WithPerfis`,
-
     readByIdPerfilWithJogosUrl: id => Api.baseUrl + `/perfil/${id}/WithJogos`,
+
     
+    // AUTH HEADER
+
+    authHeader:() =>({
+        Authorization:'Bearer' + localStorage.getItem("JWT")
+    }),
+
     // GET
-    buildApiGetRequest: url =>
+    buildApiGetRequest: (url, auth) =>
         fetch(url, {
             method: "GET",
-        }),
+            headers: auth ? new Headers(Api.authHeader()) :undefined
+        }), 
 
     // POST
-    buildApiPostRequest: (url, body) =>
+    buildApiPostRequest: (url, body, auth) =>
         fetch(url, {
             method: "POST",
             headers: new Headers({
                 "Content-type": "application/json",
+                ...(auth ? Api.authHeader() : {}),
             }),
             body: JSON.stringify(body),
         }),
 
     // PATCH
-    buildApiPatchRequest: (url, body) =>
+    buildApiPatchRequest: (url, body, auth) =>
         fetch(url, {
             method: "PATCH",
             headers: new Headers({
                 "Content-type": "application/json",
+                ...(auth ? Api.authHeader() : {}),
             }),
             body: JSON.stringify(body),
         }),
 
     // DELETE
-    buildApiDeleteRequest: url =>
+    buildApiDeleteRequest: (url, auth) =>
         fetch(url, {
             method: "DELETE",
+            headers: auth ? new Headers(Api.authHeader()) :undefined,
         }),
 };
