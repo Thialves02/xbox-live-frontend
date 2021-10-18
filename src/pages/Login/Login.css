@@ -29,12 +29,13 @@
     outline: none;
     border: none;
     height: 30px;
-    width:70%
+    width:100%
 }
 
 .login-card .login-buttons{
     position: absolute;
     bottom: 50px;
+    width: 70%;
 }
 
 .login-card .login-buttons button{
@@ -67,7 +68,7 @@
         height:60%;    
     }
     .login-card input{
-        width:60%
+        width:100%
     }
 }
 @media screen and (max-width: 600px){

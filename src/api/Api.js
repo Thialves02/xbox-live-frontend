@@ -55,7 +55,7 @@ export const Api = {
     // AUTH HEADER
 
     authHeader:() =>({
-        Authorization:'Bearer' + localStorage.getItem("JWT")
+        Authorization:'Bearer ' + localStorage.getItem("JWT")
     }),
 
     // GET
