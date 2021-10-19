@@ -5,12 +5,13 @@ import Perfis from '../../components/Perfis/Perfis';
 import './Perfil.css'
 
 
-export default function Perfil() {
+export default function Perfil(props) {
+    const id = props.match.params.id;
     const [usuario, setUsuario] = useState([]);
     let alterou = false;
     useEffect(() => {
         const loadUsuarioList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUsuarioWithPerfisUrl(1),true);
+            const response = await Api.buildApiGetRequest(Api.readAllUsuarioWithPerfisUrl(),true);
             const results = await response.json();
             if(JSON.stringify(usuario)!=JSON.stringify(results)){
                 setUsuario(results.perfis);

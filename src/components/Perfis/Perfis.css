@@ -3,6 +3,7 @@
     flex-direction:column;
     align-items:center;
     transition: all 0.7s;
+    cursor: pointer;
 }
 .perfis-container-component:hover{
     transform:scale(1.1)

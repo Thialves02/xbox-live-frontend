@@ -16,7 +16,7 @@ export default function View(props) {
             setGames(results);
         };
         loadGame();
-        console.log(games/* .generos[0] */);
+        console.log(games);
     }, [id]);
     const history = useHistory();
 

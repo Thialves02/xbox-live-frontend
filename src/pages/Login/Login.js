@@ -30,8 +30,6 @@ export default function Login(props) {
 
             const accessToken = body.accessToken;
 
-             //localStorage.setItem("JWT", accessToken);
-
             JwtHandler.setJwt(accessToken);
 
             console.log({ accessToken });
@@ -39,6 +37,7 @@ export default function Login(props) {
             props.history.push(`/perfil`);
         } else {
             // Error
+            alert("Email ou senha incorretos")
         }
     };
     return (
