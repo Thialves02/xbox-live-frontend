@@ -9,7 +9,7 @@ export default function Favoritos() {
     let alterou = false;
     useEffect(() => {
         const loadPerfilList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllPerfilWithJogosUrl(),true);
+            const response = await Api.buildApiGetRequest(Api.readByIdPerfilWithJogosUrl(1),true);
             const results = await response.json();
             if(JSON.stringify(perfil)!=JSON.stringify(results)){
                 setPerfil(results.jogos);
