@@ -47,6 +47,12 @@ export const Api = {
 
     // ENDPOINT -  PERFIL
 
+    updatePerfilUrl: id => Api.baseUrl + `/perfil/${id}`,
+
+    deletePerfilUrl: id => Api.baseUrl + `/perfil/${id}`,
+
+    readPerfilByIdUrl: id => Api.baseUrl + `/perfil/${id}`,
+
     readAllPerfilWithJogosUrl: () => Api.baseUrl + "/perfil/WithJogos",
 
     readByIdPerfilWithJogosUrl: id => Api.baseUrl + `/perfil/${id}/WithJogos`,

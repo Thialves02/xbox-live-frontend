@@ -2,6 +2,7 @@ import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
 import GeneroWithGame from './components/Genero-With-Game/GeneroWithGame';
 import GuardedRoute from './components/GuardedRoute/GuardedRoute';
+import PerfisEdit from './components/Perfis-Edit/PerfisEdit';
 import AdicionarCategoria from './pages/Adicionar-Categoria/AdicionarCategoria';
 import AdicionarJogo from './pages/Adicionar-Jogo/AdicionarJogo';
 import Administrador from './pages/Administrador/Administrador';
@@ -30,23 +31,24 @@ function App() {
         <Route path='/' exact component={Login}/>
         <Route path='/registro' exact={true} component={Registro}/>
         <GuardedRoute path='/perfil' exact={true} component={Perfil}/>
-        <Route path='/criar-perfil' exact={true} component={CriarPerfil}/>
-        <Route path='/editar-perfil' exact={true} component={EditarPerfil}/>
-        <Route path='/editar-perfis' exact={true} component={EditarPerfis}/>
-        <Route path='/home' exact={true} component={Home}/>
-        <Route path='/game/view/:id' exact={true} component={View}/>
-        <Route path='/game/view/trailer/:id' exact={true} component={ViewTrailer}/>
-        <Route path='/game/view/gameplay/:id' exact={true} component={ViewGameplay}/>
-        <Route path='/admin' exact={true} component={Administrador}/>
-        <Route path='/admin/adicionar-jogo' exact={true} component={AdicionarJogo}/>
-        <Route path='/admin/editar-jogos' exact={true} component={EditarJogos}/>
-        <Route path='/admin/editar-jogo/:id' exact={true} component={EditarJogo}/>
-        <Route path='/admin/adicionar-categoria' exact={true} component={AdicionarCategoria}/>
-        <Route path='/admin/editar-categorias' exact={true} component={EditarCategorias}/>
-        <Route path='/admin/editar-categoria/:id' exact={true} component={EditarCategoria}/>
-        <Route path='/genero' exact={true} component={Genero}/>
-        <Route path='/genero/:id/withGame' exact={true} component={GeneroWithGame}/>
-        <Route path='/favoritos' exact={true} component={Favoritos}/>
+        <GuardedRoute path='/criar-perfil' exact={true} component={CriarPerfil}/>
+        <GuardedRoute path='/editar-perfil' exact={true} component={EditarPerfil}/>
+        {/* <GuardedRoute path='/editar-perf' exact={true} component={PerfisEdit}/>  */}     {/* /////// */}
+        <GuardedRoute path='/editar-perfis/:id' exact={true} component={EditarPerfis}/>
+        <GuardedRoute path='/home' exact={true} component={Home}/>
+        <GuardedRoute path='/game/view/:id' exact={true} component={View}/>
+        <GuardedRoute path='/game/view/trailer/:id' exact={true} component={ViewTrailer}/>
+        <GuardedRoute path='/game/view/gameplay/:id' exact={true} component={ViewGameplay}/>
+        <GuardedRoute path='/admin' exact={true} component={Administrador}/>
+        <GuardedRoute path='/admin/adicionar-jogo' exact={true} component={AdicionarJogo}/>
+        <GuardedRoute path='/admin/editar-jogos' exact={true} component={EditarJogos}/>
+        <GuardedRoute path='/admin/editar-jogo/:id' exact={true} component={EditarJogo}/>
+        <GuardedRoute path='/admin/adicionar-categoria' exact={true} component={AdicionarCategoria}/>
+        <GuardedRoute path='/admin/editar-categorias' exact={true} component={EditarCategorias}/>
+        <GuardedRoute path='/admin/editar-categoria/:id' exact={true} component={EditarCategoria}/>
+        <GuardedRoute path='/genero' exact={true} component={Genero}/>
+        <GuardedRoute path='/genero/:id/withGame' exact={true} component={GeneroWithGame}/>
+        <GuardedRoute path='/favoritos' exact={true} component={Favoritos}/>
       </Switch>
     </Router>
     </div>

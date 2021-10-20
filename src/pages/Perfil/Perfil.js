@@ -6,7 +6,6 @@ import './Perfil.css'
 
 
 export default function Perfil(props) {
-    const id = props.match.params.id;
     const [usuario, setUsuario] = useState([]);
     let alterou = false;
     useEffect(() => {

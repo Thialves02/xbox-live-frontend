@@ -1,5 +1,3 @@
-
-import React, { useEffect, useState } from 'react'
 import './Perfis.css'
 
 export default function Perfis({perfil}) {
