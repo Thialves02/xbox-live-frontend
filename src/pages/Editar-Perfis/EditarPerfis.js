@@ -54,7 +54,7 @@ export default function EditarPerfis(props) {
         history.push(`/editar-perfil`);
 
         if (response.status === 200) {
-            alert("Jogo deletado com sucesso")
+            alert("Perfil deletado com sucesso")
             
         } else {
             alert("Aconteceu algum erro!!!")

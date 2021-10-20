@@ -13,7 +13,7 @@ export default function CriarPerfil() {
                 <input type="text"></input>
                 <p>IMAGEM</p>
                 <input type="text"></input>
-                <div className='perfil-buttons'>
+                <div className='registro-buttons'>
                     <button type="submit">CRIAR PERFIL</button>
                     <Link to="/perfil"><button type="submit">VOLTAR</button></Link>
                 </div>

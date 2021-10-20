@@ -6,16 +6,7 @@ import logo from '../../assets/images/logo.png'
 import { Api } from '../../api/Api'
 
 export default function AdicionarJogo() {
-    const [categorias, setCategorias] = useState([]);
-    useEffect(() => {
-        const loadCategoriasList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl(),true);
-            const results = await response.json();
-            setCategorias(results);
-        };
-        console.log({categorias})
-        loadCategoriasList();
-    }, []);
+
 
     const handleSubmit =  async event => {
         event.preventDefault();
@@ -86,14 +77,6 @@ export default function AdicionarJogo() {
                     <div className='form-item'>
                         <h2>GAMEPLAY</h2>
                         <input type="text" name='link_gp'/>
-                    </div>
-                    <div className='form-item'>
-                        <h2>GÊNERO</h2>
-                        <select id="cars" name="cars">
-                        {categorias.map((categoria, index) => (
-                            <option value="volvo">{categoria.nome}</option>
-                        ))}
-                        </select>
                     </div>
                 </div>
                 <div className='form-buttons'>

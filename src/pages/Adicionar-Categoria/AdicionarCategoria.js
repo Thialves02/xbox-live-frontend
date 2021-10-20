@@ -15,6 +15,7 @@ export default function AdicionarCategoria() {
 
         const response = await Api.buildApiPostRequest(
             Api.createGeneroUrl(),
+            true,
             payload
         )
         

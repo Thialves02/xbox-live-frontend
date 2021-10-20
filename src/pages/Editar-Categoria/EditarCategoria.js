@@ -12,7 +12,7 @@ export default function EditarCategoria(props) {
 
     useEffect(() => {
         const loadCategoriasList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdGeneroUrl(id));
+            const response = await Api.buildApiGetRequest(Api.readByIdGeneroUrl(id),true);
 
             const results = await response.json();
 
@@ -32,6 +32,7 @@ export default function EditarCategoria(props) {
 
         const response = await Api.buildApiPatchRequest(
             Api.updateGeneroUrl(id),
+            true,
             payload
         )
 
@@ -48,6 +49,7 @@ export default function EditarCategoria(props) {
         event.preventDefault();
         const response = await Api.buildApiDeleteRequest(
             Api.deleteGeneroUrl(id),
+            true
         )
         history.push(`/admin/editar-categorias`);
         if (response.status === 200) {

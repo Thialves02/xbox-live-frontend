@@ -12,7 +12,7 @@ export default function EditarJogo(props) {
 
     useEffect(() => {
         const loadGameList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUrl(id));
+            const response = await Api.buildApiGetRequest(Api.readByIdUrl(id),true);
 
             const results = await response.json();
 
