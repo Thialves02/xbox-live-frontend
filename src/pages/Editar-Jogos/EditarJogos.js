@@ -8,7 +8,7 @@ export default function EditarJogos() {
 
     useEffect(() => {
         const loadGameList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllUrl());
+            const response = await Api.buildApiGetRequest(Api.readAllUrl(),true);
             const results = await response.json();
             setGames(results);
         };

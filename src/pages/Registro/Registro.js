@@ -33,6 +33,7 @@ export default function Registro() {
 
         const response = await Api.buildApiPostRequest(
             Api.createUsuarioUrl(),
+            true,
             payload
         )
         if (response.status === 201) {

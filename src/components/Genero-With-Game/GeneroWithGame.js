@@ -10,7 +10,7 @@ export default function GeneroWithGame(props) {
 
     useEffect(() => {
         const loadCategoria = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdGeneroWithGamesUrl(id));
+            const response = await Api.buildApiGetRequest(Api.readByIdGeneroWithGamesUrl(id),true);
             const result = await response.json();
             setCategoria(result);
             console.log(result);

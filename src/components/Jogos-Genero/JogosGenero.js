@@ -7,7 +7,7 @@ export default function JogosGenero({categoria}) {
     const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         const loadCategoriaList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl());
+            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl(),true);
             const results = await response.json();
             setCategorias(results);
         };

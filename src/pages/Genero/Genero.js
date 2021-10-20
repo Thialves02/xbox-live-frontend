@@ -10,7 +10,7 @@ export default function Genero() {
     const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         const loadCategoriasList = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl());
+            const response = await Api.buildApiGetRequest(Api.readAllGeneroUrl(),true);
             const results = await response.json();
             setCategorias(results);
         };

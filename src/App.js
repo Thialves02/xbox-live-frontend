@@ -33,7 +33,6 @@ function App() {
         <GuardedRoute path='/perfil' exact={true} component={Perfil}/>
         <GuardedRoute path='/criar-perfil' exact={true} component={CriarPerfil}/>
         <GuardedRoute path='/editar-perfil' exact={true} component={EditarPerfil}/>
-        {/* <GuardedRoute path='/editar-perf' exact={true} component={PerfisEdit}/>  */}     {/* /////// */}
         <GuardedRoute path='/editar-perfis/:id' exact={true} component={EditarPerfis}/>
         <GuardedRoute path='/home' exact={true} component={Home}/>
         <GuardedRoute path='/game/view/:id' exact={true} component={View}/>
