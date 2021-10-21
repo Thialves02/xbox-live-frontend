@@ -1,5 +1,5 @@
 export const Api = {
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://xbox-live-thiago-backend.herokuapp.com",
 
     // ENDPOINT - LOGIN
 
